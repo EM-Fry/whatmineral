@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body onload="">
+        <!-- ------------------------------ -->
+        <!-- Image Frames (src added by JS) -->
+        <!-- ------------------------------ -->
+        <div id="mineralBox">
+            <div id="imagesBox">
+                <img id="image1" src="">
+                <img id="image2" src="">
+            </div>
+            <!-- <div>
+                <input type="checkbox" name="moreInfo" id="moreInfo">
+                <label for="moreInfo">Show characteristics</label>
+                <div id="infoBox"><p></p></div>
+            </div> -->
+            
+        </div>
+        <br>
+        <div id="answerBox">
+            <p>This mineral is: </p>
+            <input list="minerals" id="guess" name="guess">
+            <datalist id="minerals">
+                    <option value="Arsenopyrite">
+                    <option value="Azurite">
+                    <option value="Bornite">
+                    <option value="Cassiterite">
+                    <option value="Chalcopyrite">
+                    <option value="Cobaltite">
+                    <option value="Cuprite">
+                    <option value="Galena">
+                    <option value="Gold">
+                    <option value="Hematite">
+                    <option value="Ilmenite">
+                    <option value="Magnetite">
+                    <option value="Malachite">
+                    <option value="Molybdenite">
+                    <option value="Nickeline">
+                    <option value="Pentlandite">
+                    <option value="Pyrite">
+                    <option value="Pyrrhotite">
+                    <option value="Sphalerite">
+                    <option value="Stibnite">
+                    <option value="Wolframite">
+            </datalist>
+            <!-- <input type="text" id="formula" name="formula" placeholder="eg, Fe2O3">
+            <label for="formula">Chemical Formula: </label> -->
+            <input type="button" value="->" onclick="submitGuess()">
+            
+        </div>
+        <div id="resultBox">
+            <div id="response"></div>
+            <img src="" alt="" id="previousImg">
+        </div>
+        
+        <script src="scripts.js" async defer></script>
+    </body>
+</html>
