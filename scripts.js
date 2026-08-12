@@ -73,8 +73,11 @@ function submitGuess() {
         response.innerHTML = "No, that was <b>" + secretMineral + "<b>";
         resultBox.style.backgroundColor = "hsl(0, 60%, 80%)";
     }
+    input.value = '';
 
     changeImgs()
+
+
         
 }
 
