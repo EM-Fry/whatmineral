@@ -24,43 +24,51 @@
             </div> -->
             
         </div>
-        <br>
-        <div id="answerBox">
-            <p>This mineral is: </p>
-            <input list="minerals" id="guess" name="guess">
-            <datalist id="minerals">
-                    <option value="Arsenopyrite">
-                    <option value="Azurite">
-                    <option value="Bornite">
-                    <option value="Cassiterite">
-                    <option value="Chalcopyrite">
-                    <option value="Cobaltite">
-                    <option value="Cuprite">
-                    <option value="Galena">
-                    <option value="Gold">
-                    <option value="Hematite">
-                    <option value="Ilmenite">
-                    <option value="Magnetite">
-                    <option value="Malachite">
-                    <option value="Molybdenite">
-                    <option value="Nickeline">
-                    <option value="Pentlandite">
-                    <option value="Pyrite">
-                    <option value="Pyrrhotite">
-                    <option value="Sphalerite">
-                    <option value="Stibnite">
-                    <option value="Wolframite">
-            </datalist>
-            <!-- <input type="text" id="formula" name="formula" placeholder="eg, Fe2O3">
-            <label for="formula">Chemical Formula: </label> -->
-            <input type="button" value="->" onclick="submitGuess()">
-            
+        <div id="bottomRow">
+            <div id="answerBox">
+                <!-- <input list="minerals" id="guess" name="guess">
+                <datalist id="minerals">
+                        <option value="Arsenopyrite">
+                        <option value="Azurite">
+                        <option value="Bornite">
+                        <option value="Cassiterite">
+                        <option value="Chalcopyrite">
+                        <option value="Cobaltite">
+                        <option value="Cuprite">
+                        <option value="Galena">
+                        <option value="Gold">
+                        <option value="Hematite">
+                        <option value="Ilmenite">
+                        <option value="Magnetite">
+                        <option value="Malachite">
+                        <option value="Molybdenite">
+                        <option value="Nickeline">
+                        <option value="Pentlandite">
+                        <option value="Pyrite">
+                        <option value="Pyrrhotite">
+                        <option value="Sphalerite">
+                        <option value="Stibnite">
+                        <option value="Wolframite">
+                </datalist> -->
+
+
+                <!-- <input type="text" id="formula" name="formula" placeholder="eg, Fe2O3">
+                <label for="formula">Chemical Formula: </label> -->
+
+                <!-- <input type="button" value="->" onclick="submitGuess()"> -->
+                
+                <input type="button" id="btn1" onclick="submitGuess(this)">
+                <input type="button" id="btn2" onclick="submitGuess(this)">
+                <input type="button" id="btn3" onclick="submitGuess(this)">
+                <input type="button" id="btn4" onclick="submitGuess(this)">
+                
+            </div>
+            <div id="resultBox">
+                <div><img src="" alt="" id="previousImg"></div>
+                <div id="response"></div>
+                
+            </div>
         </div>
-        <div id="resultBox">
-            <div id="response"></div>
-            <img src="" alt="" id="previousImg">
-        </div>
-        
         <script src="scripts.js" async defer></script>
     </body>
 </html>

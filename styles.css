@@ -8,9 +8,9 @@
 
 body {
     background-color: hsl(0, 0%, 50%);
-    display: flex;
-    flex-direction: row;
-    
+    /* display: flex; */
+    /* flex-direction: row; */
+    height: 100%;
 
 }
 
@@ -19,38 +19,79 @@ body > div {
     outline: medium double hsl(40, 20%, 30%);
     padding: 0.5rem;
     margin: 0.5rem;
-    max-width: 80%;
 }
 
+#bottomRow {
+    display: flex;
+    flex-flow: row-reverse;
+    min-height: 40vh;
+    > div {
+        margin: 10px;
+        flex: 1 1 0;
+        /* padding: 0.5rem; */
+        /* outline: medium double hsl(40, 20%, 30%); */
+    }
+}
 #resultBox{
-    display: none;
-    width: 20vw;
-    overflow: hidden;
-    img {
-        max-width: 18vw;
+    /* display: flex; */
+    flex-direction: column;
+    padding: 1rem;
+    border: thin solid;
+    /* height: 30vh; */
+    min-width: 0;
+    
+    * {
+        /* border: thin solid black; */
+        flex: 1;
+        min-width: 0;
+        min-height: 0;
+        text-align: center;
+        margin: auto;
+        /* max-height: 25vh; */
+        
+        
+        
+
+    }
+}
+#previousImg {
+    max-width: 30vw;
+    max-height: 20vh;
+}
+#answerBox{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    * {
+        margin: auto;
+        padding: 1vh;
+        font-size: medium;
     }
 }
 
 #mineralBox {
     display: flex;
     flex-direction: row;
-    max-width: 60%;
-    /* height: 90%; */
+    /* width: 40vw; */
+    /* height: 90vh; */
+    /* height: 50vh; */
 }
 
 #imagesBox {
+    width: 100%;
+    height: 50vh;
     display: flex;
     flex-direction: column;
     background-color: black;
-    width: 60vw;
-    height: 90vh;
-    overflow: hidden;
+    /* overflow: hidden; */
     align-items: center;
+    /* justify-content: center; */
     img {
         flex: 1;
-        min-width: 0;
+        max-width: 100%;
+        /* max-height: fit-content; */
         min-height: 0;
-        /* height: fit-content; */
-        padding: 5px;
+        padding: 10px;
+        margin: auto;
     }
 }

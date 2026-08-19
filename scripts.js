@@ -29,43 +29,67 @@ let imagesInFolder;
 
 function changeImgs() {
     
-    // Get image frames: 
-    const frame1 = document.getElementById("image1")
-    const frame2 = document.getElementById("image2")
-    // Choose random mineral:
-    secretMineral = minerals[Math.floor(Math.random() * minerals.length)];
+// -------PICK MINERALS-------- //
+    // Minerals array:
+    const minerals = ["Arsenopyrite", "Azurite", "Bornite", "Cassiterite", "Chalcopyrite", "Cobaltite", "Cuprite", "Galena", "Gold", "Hematite", "Ilmenite", "Magnetite", "Malachite", "Molybdenite", "Nickeline", "Pentlandite", "Pyrite", "Pyrrhotite", "Sphalerite", "Stibnite", "Wolframite"];
+    // Shuffle the mineral array using Fisher Yates method:
+    for (let i = minerals.length -1; i > 0; i--) {
+        let j = Math.floor(Math.random() * (i+1));
+        let k = minerals[i];
+        minerals[i] = minerals[j];
+        minerals[j] = k;
+    }
+    // Slice the shuffled array for the first four minerals:
+    const minsPicked = minerals.slice(0, 4);
+    // The mineral to be guessed is a random one from this array:
+    secretMineral = minsPicked[Math.floor(minsPicked.length * Math.random())];
+// -------REPLACE IMAGES-------- //
     imagesInFolder = imageDirectory[secretMineral];
-    // Choose two random mineral photos: 
+    // Choose two random photos from the folder chosen: 
     let photo1 = imagesInFolder[Math.floor(Math.random() * imagesInFolder.length)];
     let photo2 = imagesInFolder[Math.floor(Math.random() * imagesInFolder.length)];
     if (photo1 == photo2) {
         photo2 = imagesInFolder[0];
         photo1 = imagesInFolder[1];
     }
-    // Replace images in frames:
+    // Get image frames: 
+    const frame1 = document.getElementById("image1");
+    const frame2 = document.getElementById("image2");
+    // Switch images in frames:
     frame1.src = `Images/${secretMineral}/${photo1}`;
     frame2.src = `Images/${secretMineral}/${photo2}`;
+// -------CHANGE OPTIONS-------- //
+    // Options to pick from will be the four minerals in minsPicked array.
+    // Get each button and change its value to each element in minsPicked:
+    const btn1 = document.getElementById("btn1");
+    btn1.value = minsPicked.pop();
+    const btn2 = document.getElementById("btn2");
+    btn2.value = minsPicked.pop();
+    const btn3 = document.getElementById("btn3");
+    btn3.value = minsPicked.pop();
+    const btn4 = document.getElementById("btn4");
+    btn4.value = minsPicked.pop();
 
-    // -----------------------------------------------
+    // const btn2 = getElementById("btn2");
+
+
+// -----------------------------------------------
     
 }
-// Minerals array:
-// const minerals = ["Arsenopyrite", "Azurite", "Bornite", "Cassiterite", "Chalcopyrite", "Cobaltite", "Cuprite", "Galena", "Gold", "Hematite", "Ilmenite", "Magnetite", "Malachite", "Molybdenite", "Nickeline", "Pentlandite", "Pyrite", "Pyrrhotite", "Sphalerite", "Stibnite", "Wolframite"]
+
 changeImgs()
 
-function submitGuess() {
-    const input = document.getElementById("guess")
+function submitGuess(butnPicked) {
+    // const input = document.getElementById("guess");
     const response = document.getElementById("response");
-    const previousImg = document.getElementById("previousImg")
-    const resultBox = document.getElementById("resultBox")
+    const previousImg = document.getElementById("previousImg");
+    const resultBox = document.getElementById("resultBox");
     // Get name of first image in directory of the secret mineral: 
     let firstImg = imageDirectory[secretMineral][0];
     // Convert this to a path, and change previousImg src to this:
     previousImg.src = `Images/${secretMineral}/${firstImg}`;
-    // Display the result pane: 
-    resultBox.style.display = "block";
 
-    if (input.value == secretMineral) {
+    if (butnPicked.value == secretMineral) {
         response.innerHTML = "Yep! That was <b>" + secretMineral + "<b>";
         resultBox.style.backgroundColor = "hsl(130, 50%, 70%)";
     }
@@ -73,7 +97,7 @@ function submitGuess() {
         response.innerHTML = "No, that was <b>" + secretMineral + "<b>";
         resultBox.style.backgroundColor = "hsl(0, 60%, 80%)";
     }
-    input.value = '';
+    // input.value = '';
 
     changeImgs()
 
