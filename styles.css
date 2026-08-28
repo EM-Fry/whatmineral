@@ -74,24 +74,24 @@ body > div {
     flex-direction: row;
     /* width: 40vw; */
     /* height: 90vh; */
-    height: 50%;
+    /* height: 50%; */
 }
 
 #imagesBox {
     width: 100%;
-    height: 100%;
+    height: 50%;
     display: flex;
     flex-direction: column;
     background-color: black;
-    /* overflow: hidden; */
+    overflow: hidden;
     align-items: center;
     /* justify-content: center; */
     img {
         flex: 1;
-        max-width: 100%;
+        /* max-width: 100%; */
         /* max-height: fit-content; */
         min-height: 0;
         padding: 10px;
-        margin: auto;
+        /* margin: auto; */
     }
 }
