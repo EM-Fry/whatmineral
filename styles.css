@@ -17,31 +17,49 @@ body {
 body > div {
     /* background-color: hsl(235, 29%, 41%); */
     /* outline: medium double hsl(40, 20%, 30%); */
-    padding: 0.5rem;
-    margin: 0.5rem;
+    /* padding: 0.5rem; */
+    margin: 0.5rem 0;
+}
+
+img{
+    min-height: 0;
+    margin: 10px;
+    outline: medium solid hsl(40, 30%, 10%);
+}
+#imagesBox {
+    /* width: 100%; */
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    /* background-color: black; */
+    overflow: hidden;
+    align-items: center;
+    /* justify-content: center; */
 }
 
 #bottomRow {
     display: flex;
     flex-flow: row-reverse;
-    height: 40%;
+    height: 50%;
     /* background-color: rgba(50, 20, 20, 100); */
-    > div {
-        margin: 10px;
-        padding: 0.5rem;
-        outline: medium double hsl(40, 20%, 30%);
-    }
+    /* > div { */
+        /* margin: 10px; */
+        /* padding: 0.5rem; */
+        /* outline: medium double hsl(40, 20%, 30%); */
+    /* } */
 }
 #resultBox{
     flex: 1 0 0;
     display: flex;
     flex-direction: column;
     padding: 1rem;
-    /* border: thin solid; */
-    /* max-height: 30%; */
+    border: medium solid hsl(40, 30%, 10%);
     min-width: 0;
     /* max-height: 60%; */
     overflow: hidden;
+    font-size: small;
+    margin: 2%;
+
     
     * {
         /* border: thin solid black; */
@@ -57,20 +75,25 @@ body > div {
     /* min-height: 0;
     min-width: none; */
     object-fit: scale-down;
+    outline: none;
+    /* border: medium solid blue; */
+    /* background-color: hsl(40, 30%, 10%); */
 }
 #answerBox{
-    background-color: hsl(235, 40%, 30%);
+    /* background-color: hsl(235, 40%, 30%); */
     flex: 2;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     text-align: center;
+    /* overflow: hidden; */
     * {
         margin: 1% 2%;
         padding: 2%;
         font-size: small;
         color: black;
         background-color: bisque;
+        min-width: none;
     }
 }
 
@@ -83,19 +106,3 @@ body > div {
 /* }  */
 
 
-#imagesBox {
-    /* width: 100%; */
-    height: 50%;
-    display: flex;
-    flex-direction: column;
-    /* background-color: black; */
-    overflow: hidden;
-    align-items: center;
-    /* justify-content: center; */
-}
-#image1, #image2{
-    min-height: 0;
-    margin: 10px;
-    
-    outline: medium solid hsl(40, 30%, 10%);
-}

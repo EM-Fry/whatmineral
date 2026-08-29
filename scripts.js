@@ -132,7 +132,7 @@ function submitGuess(butnPicked) {
     }
     else {
         response.innerHTML = "No, that was <b>" + secretMineral + "<b>";
-        resultBox.style.backgroundColor = "hsl(0, 40%, 80%)";
+        resultBox.style.backgroundColor = "hsl(0, 70%, 80%)";
     }
     // input.value = '';
 
