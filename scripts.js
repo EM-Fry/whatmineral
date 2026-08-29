@@ -128,11 +128,11 @@ function submitGuess(butnPicked) {
 
     if (butnPicked.value == secretMineral) {
         response.innerHTML = "Yep! That was <b>" + secretMineral + "<b>";
-        resultBox.style.backgroundColor = "hsl(130, 50%, 70%)";
+        resultBox.style.color = "hsl(130, 50%, 70%)";
     }
     else {
         response.innerHTML = "No, that was <b>" + secretMineral + "<b>";
-        resultBox.style.backgroundColor = "hsl(0, 70%, 80%)";
+        resultBox.style.color = "hsl(0, 70%, 80%)";
     }
     // input.value = '';
 
