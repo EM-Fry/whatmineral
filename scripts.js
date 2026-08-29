@@ -72,8 +72,8 @@ function changeImgs() {
         minerals[i] = minerals[j];
         minerals[j] = k;
     }
-    // Slice the shuffled array for the first four minerals:
-    const minsPicked = minerals.slice(0, 4);
+    // Slice the shuffled array for the minerals to be added to buttons:
+    const minsPicked = minerals.slice(0, 8);
     // The mineral to be guessed is a random one from this array:
     secretMineral = minsPicked[Math.floor(minsPicked.length * Math.random())];
 // -------REPLACE IMAGES-------- //
@@ -92,7 +92,7 @@ function changeImgs() {
     frame1.src = `Images/${secretMineral}/${photo1}`;
     frame2.src = `Images/${secretMineral}/${photo2}`;
 // -------CHANGE OPTIONS-------- //
-    // Options to pick from will be the four minerals in minsPicked array.
+    // Options to pick from will be the minerals in minsPicked array.
     // Get each button and change its value to each element in minsPicked:
     const btn1 = document.getElementById("btn1");
     btn1.value = minsPicked.pop();
@@ -102,10 +102,14 @@ function changeImgs() {
     btn3.value = minsPicked.pop();
     const btn4 = document.getElementById("btn4");
     btn4.value = minsPicked.pop();
-
-    // const btn2 = getElementById("btn2");
-
-
+    const btn5 = document.getElementById("btn5");
+    btn5.value = minsPicked.pop();
+    const btn6 = document.getElementById("btn6");
+    btn6.value = minsPicked.pop();
+    const btn7 = document.getElementById("btn7");
+    btn7.value = minsPicked.pop();
+    const btn8 = document.getElementById("btn8");
+    btn8.value = minsPicked.pop();
 // -----------------------------------------------
     
 }
@@ -128,7 +132,7 @@ function submitGuess(butnPicked) {
     }
     else {
         response.innerHTML = "No, that was <b>" + secretMineral + "<b>";
-        resultBox.style.backgroundColor = "hsl(0, 60%, 80%)";
+        resultBox.style.backgroundColor = "hsl(0, 40%, 80%)";
     }
     // input.value = '';
 
