@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
+        <title>WhatMineral?</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="styles.css">
@@ -12,19 +12,13 @@
         <!-- ------------------------------ -->
         <!-- Image Frames (src added by JS) -->
         <!-- ------------------------------ -->
+        
         <div id="imagesBox">
             <img id="image1" src="">
             <img id="image2" src="">
+            <div id="mineralInfo"></div>
         </div>
-        <!-- <div id="mineralBox">
-            
-            <div>
-                <input type="checkbox" name="moreInfo" id="moreInfo">
-                <label for="moreInfo">Show characteristics</label>
-                <div id="infoBox"><p></p></div>
-            </div>
-            
-        </div> -->
+        
         <div id="bottomRow">
             <div id="answerBox">
                 
@@ -48,6 +42,11 @@
                 <div id="response"></div>
             </div>
         </div>
+        <div class="tickbox">
+            <input type="checkbox" name="datacheckbox" id="datacheckbox">
+            <label for="datacheckbox">Show characteristics from mindat</label>
+        </div>
+        
         <script src="scripts.js" async defer></script>
     </body>
 </html>

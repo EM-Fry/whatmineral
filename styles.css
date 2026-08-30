@@ -2,16 +2,15 @@
     box-sizing: border-box;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: 500;
-
+    /* border: thick solid white; */
 
 }
 
 body {
     background-image: linear-gradient(hsl(235, 58%, 13%), hsl(251, 35%, 70%), hsl(235, 58%, 13%), hsl(235, 58%, 13%), hsl(235, 58%, 13%));
-    /* display: flex; */
-    /* flex-direction: row; */
-    height: 100vh;
-
+    display: flex;
+    flex-direction: column;
+    height: 95vh;
 }
 
 body > div {
@@ -36,11 +35,18 @@ img{
     align-items: center;
     /* justify-content: center; */
 }
+#mineralInfo {
+    color: bisque;
+    font-size: smaller;
+    background-color: midnightblue;
+    outline: medium solid hsl(40, 30%, 10%);
+    padding: 0.5em;
+}
 
 #bottomRow {
     display: flex;
     flex-flow: row-reverse;
-    height: 50%;
+    height: 40%;
     /* background-color: rgba(50, 20, 20, 100); */
     /* > div { */
         /* margin: 10px; */
@@ -95,6 +101,15 @@ img{
         background-color: bisque;
         min-width: none;
     }
+}
+
+.tickbox {
+    margin: 1% 2%;
+    padding: 2%;
+    font-size: small;
+    color: white;
+    background-color: midnightblue;
+    min-width: none;
 }
 
 /* #mineralBox {
